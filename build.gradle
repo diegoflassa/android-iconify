@@ -1,7 +1,30 @@
+buildscript {
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.0.1'
+    }
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.0'
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
 subprojects {
     buildscript {
         repositories {
             jcenter()
+            google()
         }
     }
 
@@ -11,8 +34,26 @@ subprojects {
 }
 
 ext {
-    androidPlugin = 'com.android.tools.build:gradle:1.3.0'
+    androidPlugin = 'com.android.tools.build:gradle:4.0.1'
     minSdkVersion = 4
-    compileSdkVersion = 22
-    buildToolsVersion = '23.0.1'
+    compileSdkVersion = 30
+    buildToolsVersion = '30.0.2'
+}
+
+repositories {
+    mavenCentral()
+    google()
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.0"
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }

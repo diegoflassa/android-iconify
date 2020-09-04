@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Iconify</string>
+    <string name="icon_key">{%1$s}</string>
 </resources>

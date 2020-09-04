@@ -5,6 +5,9 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 repositories {
     jcenter()
@@ -16,7 +19,7 @@ android {
 
     defaultConfig {
         applicationId "com.joanzapata.android.icons.sample"
-        minSdkVersion 8
+        minSdkVersion 14
         targetSdkVersion rootProject.ext.compileSdkVersion
         versionCode VERSION_CODE.toInteger()
         versionName VERSION_NAME
@@ -34,8 +37,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_6
-        targetCompatibility JavaVersion.VERSION_1_6
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     buildTypes {
@@ -47,20 +50,21 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.android.support:recyclerview-v7:22.2.1'
-    compile 'com.android.support:design:22.2.1'
-    compile 'com.jakewharton:butterknife:7.0.1'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
 
-    compile project(':android-iconify-fontawesome')
-    compile project(':android-iconify-typicons')
-    compile project(':android-iconify-ionicons')
-    compile project(':android-iconify-entypo')
-    compile project(':android-iconify-material')
-    compile project(':android-iconify-material-community')
-    compile project(':android-iconify-meteocons')
-    compile project(':android-iconify-weathericons')
-    compile project(':android-iconify-simplelineicons')
+    implementation project(':android-iconify-fontawesome')
+    implementation project(':android-iconify-typicons')
+    implementation project(':android-iconify-ionicons')
+    implementation project(':android-iconify-entypo')
+    implementation project(':android-iconify-material')
+    implementation project(':android-iconify-material-community')
+    implementation project(':android-iconify-meteocons')
+    implementation project(':android-iconify-weathericons')
+    implementation project(':android-iconify-simplelineicons')
+    implementation 'androidx.viewpager:viewpager:1.0.0'
 }
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
