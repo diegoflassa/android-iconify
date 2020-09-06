@@ -20,7 +20,7 @@ class IconAdapter(private val icons: Array<Icon>) :
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val icon = icons[position]
-        viewHolder.icon!!.text = MyApplication.context.getString(R.string.icon_key, icon.key())
+        viewHolder.icon!!.text = MyApplication.getContext().getString(R.string.icon_key, icon.key())
         viewHolder.name!!.text = icon.key()
     }
 

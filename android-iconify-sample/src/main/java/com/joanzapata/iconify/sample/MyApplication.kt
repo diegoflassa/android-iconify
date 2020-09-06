@@ -2,17 +2,19 @@ package com.joanzapata.iconify.sample
 
 import android.app.Application
 import android.content.Context
+import java.lang.ref.WeakReference
 
 
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
-        mContext = this
+        context =  WeakReference(this)
     }
 
     companion object {
-        private lateinit var mContext: Context
-        val context: Context
-            get() = mContext
+        private lateinit var context: WeakReference<Context>
+        fun getContext():Context{
+            return context.get()!!
+        }
     }
 }

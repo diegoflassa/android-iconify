@@ -98,6 +98,7 @@ object Iconify {
          * @param iconFontDescriptor The IconDescriptor holding the ttf file reference and its mappings.
          * @return An initializer instance for chain calls.
          */
+        @Suppress("unused")
         fun with(iconFontDescriptor: IconFontDescriptor): IconifyInitializer {
             addIconFontDescriptor(iconFontDescriptor)
             return this

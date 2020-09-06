@@ -1,6 +1,6 @@
-package com.joanzapata.iconify.fonts;
+package com.joanzapata.iconify.fonts
 
-import com.joanzapata.iconify.Icon;
+import com.joanzapata.iconify.Icon
 
 enum class SimpleLineIconsIcons(private val character: Char) : Icon {
     icon_user_female('\ue000'),

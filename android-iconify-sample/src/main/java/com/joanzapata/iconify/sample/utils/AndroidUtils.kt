@@ -35,14 +35,14 @@ object AndroidUtils {
                 } catch (e: Exception) {
                     //this may not be 100% accurate, but it's all we've got
                     realWidth = display?.width!!
-                    realHeight = display?.height!!
+                    realHeight = display.height
                     Log.e("Display Info", "Couldn't use reflection to get the real display metrics.")
                 }
             }
             else -> {
                 //This should be close, as lower API devices should not have window navigation bars
                 realWidth = display?.width!!
-                realHeight = display?.height!!
+                realHeight = display.height
             }
         }
         return Size(realWidth!!, realHeight!!)

@@ -1,6 +1,6 @@
-package com.joanzapata.iconify.fonts;
+package com.joanzapata.iconify.fonts
 
-import com.joanzapata.iconify.Icon;
+import com.joanzapata.iconify.Icon
 
 enum class MeteoconsIcons(private val character: Char) : Icon {
     mc_sunrise_o('A'),

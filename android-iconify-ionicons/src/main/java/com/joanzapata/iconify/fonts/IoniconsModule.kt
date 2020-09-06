@@ -9,8 +9,8 @@ class IoniconsModule : IconFontDescriptor {
     }
 
     override fun characters(): Array<Icon> {
-        val retArray = ArrayList<Icon>(IoniconsIcons.values().size)
-        for (icon in IoniconsIcons.values())
+        val retArray = ArrayList<Icon>(IonicIcons.values().size)
+        for (icon in IonicIcons.values())
             retArray.add(icon)
         return retArray.toTypedArray()
     }

@@ -1,6 +1,6 @@
-package com.joanzapata.iconify.fonts;
+package com.joanzapata.iconify.fonts
 
-import com.joanzapata.iconify.Icon;
+import com.joanzapata.iconify.Icon
 
 enum class MaterialCommunityIcons(private val character: Char) : Icon {
     mdi_access_point('\uf101'),

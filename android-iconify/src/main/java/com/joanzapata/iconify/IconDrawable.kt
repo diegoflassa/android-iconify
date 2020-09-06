@@ -21,6 +21,7 @@ import com.joanzapata.iconify.Iconify.findTypefaceOf
  * that is given to him. Note that in an ActionBar, if you don't
  * set the size explicitly it uses 0, so please use actionBarSize().
  */
+@Suppress("unused")
 class IconDrawable : Drawable {
 
     private var context: Context? = null

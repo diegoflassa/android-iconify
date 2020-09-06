@@ -1,6 +1,6 @@
-package com.joanzapata.iconify.fonts;
+package com.joanzapata.iconify.fonts
 
-import com.joanzapata.iconify.Icon;
+import com.joanzapata.iconify.Icon
 
 enum class MaterialIcons(private val character: Char) : Icon {
     md_3d_rotation('\ue84d'),

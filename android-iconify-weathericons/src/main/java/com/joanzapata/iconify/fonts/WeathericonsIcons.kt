@@ -1,6 +1,6 @@
-package com.joanzapata.iconify.fonts;
+package com.joanzapata.iconify.fonts
 
-import com.joanzapata.iconify.Icon;
+import com.joanzapata.iconify.Icon
 
 enum class WeathericonsIcons(private val character: Char) : Icon {
     wi_day_sunny('\uf00d'),
