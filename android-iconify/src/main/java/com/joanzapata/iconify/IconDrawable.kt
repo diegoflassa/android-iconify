@@ -7,6 +7,7 @@ import android.graphics.*
 import android.graphics.drawable.Drawable
 import android.text.TextPaint
 import android.util.TypedValue
+import androidx.core.content.ContextCompat
 import com.joanzapata.iconify.Iconify.findIconForKey
 import com.joanzapata.iconify.Iconify.findTypefaceOf
 
@@ -124,7 +125,7 @@ class IconDrawable : Drawable {
      * @return The current IconDrawable for chaining.
      */
     fun colorRes(colorRes: Int): IconDrawable {
-        paint!!.color = context!!.resources.getColor(colorRes)
+        paint!!.color = ContextCompat.getColor(context!!, colorRes)
         invalidateSelf()
         return this
     }
@@ -185,7 +186,7 @@ class IconDrawable : Drawable {
     }
 
     override fun getOpacity(): Int {
-        return mAlpha
+        return if (mAlpha < 255) PixelFormat.TRANSLUCENT else PixelFormat.OPAQUE
     }
 
     /**

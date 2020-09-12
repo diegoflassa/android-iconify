@@ -2,6 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
+@Suppress("unused", "EnumEntryName")
 enum class WeathericonsIcons(private val character: Char) : Icon {
     wi_day_sunny('\uf00d'),
     wi_day_cloudy('\uf002'),

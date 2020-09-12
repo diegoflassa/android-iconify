@@ -2,6 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
+@Suppress("unused", "EnumEntryName")
 enum class SimpleLineIconsIcons(private val character: Char) : Icon {
     icon_user_female('\ue000'),
     icon_user_follow('\ue002'),

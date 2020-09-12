@@ -2,6 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
+@Suppress("unused", "EnumEntryName")
 enum class MaterialIcons(private val character: Char) : Icon {
     md_3d_rotation('\ue84d'),
     md_access_alarm('\ue190'),

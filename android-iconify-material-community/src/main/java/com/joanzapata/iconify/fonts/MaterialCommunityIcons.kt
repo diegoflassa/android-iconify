@@ -2,6 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
+@Suppress("unused", "EnumEntryName")
 enum class MaterialCommunityIcons(private val character: Char) : Icon {
     mdi_access_point('\uf101'),
     mdi_access_point_network('\uf102'),

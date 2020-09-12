@@ -2,6 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
+@Suppress("unused", "EnumEntryName")
 enum class MeteoconsIcons(private val character: Char) : Icon {
     mc_sunrise_o('A'),
     mc_sun_o('B'),

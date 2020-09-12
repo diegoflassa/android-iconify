@@ -4,7 +4,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
-@Suppress("unused")
+@Suppress("unused", "EnumEntryName")
 enum class FontAwesomeIcons(private val character: Char) : Icon {
     fa_glass('\uf000'),
     fa_music('\uf001'),

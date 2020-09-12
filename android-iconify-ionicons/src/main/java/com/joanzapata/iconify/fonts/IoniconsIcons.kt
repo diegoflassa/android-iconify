@@ -2,7 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
-@Suppress("unused")
+@Suppress("unused", "EnumEntryName")
 enum class IonicIcons(private val character: Char) : Icon {
     ion_alert('\uf101'),
     ion_alert_circled('\uf100'),

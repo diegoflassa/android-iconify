@@ -27,7 +27,8 @@
                 android:adjustViewBounds="true"
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/image_header" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -39,7 +40,7 @@
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabs"
-                app:tabGravity="fill"
+                app:tabGravity="start"
                 app:tabMode="scrollable"
                 app:tabIndicatorHeight="4dp"
                 android:layout_gravity="bottom"
@@ -50,7 +51,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

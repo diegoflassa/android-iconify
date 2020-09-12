@@ -2,6 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
+@Suppress("unused", "EnumEntryName")
 enum class TypiconsIcons(private val character: Char) : Icon {
     typcn_adjust_brightness('\ue000'),
     typcn_adjust_contrast('\ue001'),

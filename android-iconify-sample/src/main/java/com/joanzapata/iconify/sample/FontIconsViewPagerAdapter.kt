@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.PagerAdapter
 import com.joanzapata.iconify.IconFontDescriptor
+import com.joanzapata.iconify.sample.databinding.ItemFontBinding
 import com.joanzapata.iconify.sample.utils.AndroidUtils.getScreenSize
 
 class FontIconsViewPagerAdapter(private val fonts: Array<Font>) : PagerAdapter() {
@@ -22,15 +22,13 @@ class FontIconsViewPagerAdapter(private val fonts: Array<Font>) : PagerAdapter()
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val context = container.context
-        val inflater = LayoutInflater.from(context)
-        val view = inflater.inflate(R.layout.item_font, container, false)
-        val recyclerView: RecyclerView = view.findViewById<View>(R.id.recyclerView) as RecyclerView
+        val binding = ItemFontBinding.inflate(LayoutInflater.from(context), container, false)
         val nbColumns = getScreenSize((context as Activity)).width /
                 context.getResources().getDimensionPixelSize(R.dimen.item_width)
-        recyclerView.layoutManager = GridLayoutManager(context, nbColumns)
-        recyclerView.adapter = IconAdapter(fonts[position].font.characters())
-        container.addView(view)
-        return view
+        binding.recyclerView.layoutManager = GridLayoutManager(context, nbColumns)
+        binding.recyclerView.adapter = IconAdapter(fonts[position].font.characters())
+        container.addView(binding.root)
+        return binding.root
     }
 
     override fun getPageTitle(position: Int): CharSequence {

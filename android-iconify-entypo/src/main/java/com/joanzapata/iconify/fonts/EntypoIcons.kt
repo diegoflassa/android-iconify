@@ -2,6 +2,7 @@ package com.joanzapata.iconify.fonts
 
 import com.joanzapata.iconify.Icon
 
+@Suppress("unused", "EnumEntryName")
 enum class EntypoIcons(private val character: Char) : Icon {
     entypo_github('\ue600'),
     entypo_github_with_circle('\ue601'),
