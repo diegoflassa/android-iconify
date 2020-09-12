@@ -5,7 +5,7 @@ import com.joanzapata.iconify.IconFontDescriptor
 
 class SimpleLineIconsModule : IconFontDescriptor {
     override fun ttfFileName(): String {
-        return "iconify/android-iconify-simplelineicons.ttf"
+        return "iconify/android-iconify-simplelineicons-1.0.0.ttf"
     }
 
     override fun characters(): Array<Icon> {

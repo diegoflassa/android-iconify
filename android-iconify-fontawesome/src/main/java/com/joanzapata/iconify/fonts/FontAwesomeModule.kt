@@ -5,7 +5,7 @@ import com.joanzapata.iconify.IconFontDescriptor
 
 class FontAwesomeModule : IconFontDescriptor {
     override fun ttfFileName(): String {
-        return "iconify/android-iconify-fontawesome.ttf"
+        return "iconify/android-iconify-fontawesome-4.5.ttf"
     }
 
     override fun characters(): Array<Icon> {

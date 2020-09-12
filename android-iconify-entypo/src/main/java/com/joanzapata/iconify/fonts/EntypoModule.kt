@@ -5,7 +5,7 @@ import com.joanzapata.iconify.IconFontDescriptor
 
 class EntypoModule : IconFontDescriptor {
     override fun ttfFileName(): String {
-        return "iconify/android-iconify-entypo.ttf"
+        return "iconify/android-iconify-entypo-3,2015.ttf"
     }
 
     override fun characters(): Array<Icon> {

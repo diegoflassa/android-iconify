@@ -5,7 +5,7 @@ import com.joanzapata.iconify.IconFontDescriptor
 
 class MeteoconsModule : IconFontDescriptor {
     override fun ttfFileName(): String {
-        return "iconify/android-iconify-meteocons.ttf"
+        return "iconify/android-iconify-meteocons-previous.ttf"
     }
 
     override fun characters(): Array<Icon> {

@@ -5,7 +5,7 @@ import com.joanzapata.iconify.IconFontDescriptor
 
 class TypiconsModule : IconFontDescriptor {
     override fun ttfFileName(): String {
-        return "iconify/android-iconify-typicons.ttf"
+        return "iconify/android-iconify-typicons-2.0.7.ttf"
     }
 
     override fun characters(): Array<Icon> {

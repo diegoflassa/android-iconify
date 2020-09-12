@@ -68,5 +68,3 @@ dependencies {
     implementation project(':android-iconify-simplelineicons')
     implementation 'androidx.viewpager:viewpager:1.0.0'
 }
-
-apply from: rootProject.file('gradle/gradle-mvn-push.gradle')

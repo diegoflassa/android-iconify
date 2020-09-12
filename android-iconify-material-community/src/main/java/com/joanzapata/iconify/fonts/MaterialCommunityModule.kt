@@ -5,7 +5,7 @@ import com.joanzapata.iconify.IconFontDescriptor
 
 class MaterialCommunityModule : IconFontDescriptor {
     override fun ttfFileName(): String {
-        return "iconify/android-iconify-material-community.ttf"
+        return "iconify/android-iconify-material-community-1.4.57.ttf"
     }
 
     override fun characters(): Array<Icon> {
