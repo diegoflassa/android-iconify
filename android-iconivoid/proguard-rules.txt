@@ -1,0 +1,2 @@
+#noinspection ShrinkerUnresolvedReference
+-keep class io.github.diegoflassa.iconivoid.** { *; }

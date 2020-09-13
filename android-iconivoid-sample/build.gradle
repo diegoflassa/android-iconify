@@ -1,0 +1,70 @@
+buildscript {
+    dependencies {
+        classpath rootProject.ext.androidPlugin
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "io.github.diegoflassa.android.icons.sample"
+        minSdkVersion 14
+        targetSdkVersion rootProject.ext.compileSdkVersion
+        versionCode VERSION_CODE.toInteger()
+        versionName VERSION_NAME
+    }
+
+    def password = project.hasProperty('iconivoid_SAMPLE_KEYSTORE_PASSWORD') ?
+            project.property('iconivoid_SAMPLE_KEYSTORE_PASSWORD') : ''
+    signingConfigs {
+        release {
+            storeFile file(KEYSTORE_FILE)
+            storePassword KEYSTORE_PASSWORD
+            keyAlias KEYSTORE_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+
+    implementation project(':android-iconivoid-fontawesome')
+    implementation project(':android-iconivoid-typicons')
+    implementation project(':android-iconivoid-ionicons')
+    implementation project(':android-iconivoid-entypo')
+    implementation project(':android-iconivoid-material')
+    implementation project(':android-iconivoid-material-community')
+    implementation project(':android-iconivoid-meteocons')
+    implementation project(':android-iconivoid-weathericons')
+    implementation project(':android-iconivoid-simplelineicons')
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+}

@@ -1,19 +1,19 @@
 # Migration from 1.X.X
 
-Iconify 2.X.X introduces breaking changes, here's the full list:
+iconivoid 2.X.X introduces breaking changes, here's the full list:
 
 **In build file**
 
-- `compile 'com.joanzapata.android:android-iconify:1.X.X'` -> `compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.X.X'`
+- `compile 'io.github.diegoflassa.iconivoid.android:android-iconivoid:1.X.X'` -> `compile 'io.github.diegoflassa.iconivoid:android-iconivoid-fontawesome:2.X.X'`
 
 **In layouts**
 
-- `android.widget.IconButton` -> `com.joanzapata.iconify.widget.IconButton`
-- `android.widget.IconTextView` -> `com.joanzapata.iconify.widget.IconTextView`
-- `android.widget.IconToggleButton` -> `com.joanzapata.iconify.widget.IconToggleButton`
+- `android.widget.IconButton` -> `io.github.diegoflassa.iconivoid.widget.IconButton`
+- `android.widget.IconTextView` -> `io.github.diegoflassa.iconivoid.widget.IconTextView`
+- `android.widget.IconToggleButton` -> `io.github.diegoflassa.iconivoid.widget.IconToggleButton`
 
 **In code**
 
-- `com.joanzapata.android.iconify...` -> `com.joanzapata.iconify...`
-- `Iconify.IconValue.fa_something` -> `FontAwesomeIcons.fa_something`
-- Nothing in `Application` class -> `Iconify.with(new FontAwesomeModule())`
+- `io.github.diegoflassa.android.iconivoid...` -> `io.github.diegoflassa.iconivoid...`
+- `iconivoid.IconValue.fa_something` -> `FontAwesomeIcons.fa_something`
+- Nothing in `Application` class -> `iconivoid.with(new FontAwesomeModule())`

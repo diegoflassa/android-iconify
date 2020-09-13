@@ -1,6 +1,6 @@
 # Publish to Play Store
 
-Setup `ICONIFY_SAMPLE_KEYSTORE_PASSWORD` in your `~/.gradle/gradle.properties` then
+Setup `iconivoid_SAMPLE_KEYSTORE_PASSWORD` in your `~/.gradle/gradle.properties` then
 
 ```
 gradle assembleRelease

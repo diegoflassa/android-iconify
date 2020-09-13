@@ -1,10 +1,10 @@
-# Note: Due to lack of time, Iconify is no longer maintained and icon packs are outdated. I'd be very happy to welcome a new contributor, please reach me on twitter [@JoanZap](https://twitter.com/joanzap) if by any chance you're interested. 🙂
+# Note: Due to lack of time, iconivoid is no longer maintained and icon packs are outdated. I'd be very happy to welcome a new contributor.
 
 <img src="graphics/logo.jpg" height="154" align="center">
 
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" width="121">](https://play.google.com/store/apps/details?id=com.joanzapata.android.icons.sample)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" width="121">](https://play.google.com/store/apps/details?id=io.github.diegoflassa.android.icons.sample)
 
-**Iconify** offers you a **huge collection of vector icons** to choose from, and an intuitive way to **add and customize them in your Android app**. It has been introduced in [**this blog post**](http://blog.joanzapata.com/iconify-just-got-a-lot-better/) which is a good place to get started. 
+**iconivoid** offers you a **huge collection of vector icons** to choose from, and an intuitive way to **add and customize them in your Android app**. It has been introduced in [**this blog post**](http://blog.joanzapata.com/iconivoid-just-got-a-lot-better/) which is a good place to get started. 
 
 -----
 
@@ -14,15 +14,15 @@ Pick any number of modules and declare them in your `Application`.
 
 ```gradle
 dependencies {
-    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2' // (v4.5)
-    compile 'com.joanzapata.iconify:android-iconify-entypo:2.2.2' // (v3,2015)
-    compile 'com.joanzapata.iconify:android-iconify-typicons:2.2.2' // (v2.0.7)
-    compile 'com.joanzapata.iconify:android-iconify-material:2.2.2' // (v2.0.0)
-    compile 'com.joanzapata.iconify:android-iconify-material-community:2.2.2' // (v1.4.57)
-    compile 'com.joanzapata.iconify:android-iconify-meteocons:2.2.2' // (latest)
-    compile 'com.joanzapata.iconify:android-iconify-weathericons:2.2.2' // (v2.0)
-    compile 'com.joanzapata.iconify:android-iconify-simplelineicons:2.2.2' // (v1.0.0)
-    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2' // (v2.0.1)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-fontawesome:2.2.2' // (v4.5)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-entypo:2.2.2' // (v3,2015)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-typicons:2.2.2' // (v2.0.7)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-material:2.2.2' // (v2.0.0)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-material-community:2.2.2' // (v1.4.57)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-meteocons:2.2.2' // (latest)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-weathericons:2.2.2' // (v2.0)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-simplelineicons:2.2.2' // (v1.0.0)
+    compile 'io.github.diegoflassa.iconivoid:android-iconivoid-ionicons:2.2.2' // (v2.0.1)
 }
 ```
 
@@ -32,7 +32,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Iconify
+        iconivoid
             .with(new FontAwesomeModule())
             .with(new EntypoModule())
             .with(new TypiconsModule())
@@ -51,7 +51,7 @@ public class MyApplication extends Application {
 If you need to put an icon on a ```TextView``` or a ```Button```, use the ```{ }``` syntax. The icons act exactly like the text, so you can apply shadow, size and color on them!
 
 ```xml
-<com.joanzapata.iconify.widget.IconTextView
+<io.github.diegoflassa.iconivoid.widget.IconTextView
     android:text="I {fa-heart-o} to {fa-code} on {fa-android}"
     android:shadowColor="#22000000"
     android:shadowDx="3"
@@ -86,28 +86,26 @@ menu.findItem(R.id.share).setIcon(
 
 ## Extensibility
 
-In case you can't find the icon you want, you can extend the available icon directly from your app. All you need to do is to implement `IconFontDescriptor` with a `.ttf` file in your assets and provide the mapping between keys and special characters, then give it to `Iconify.with()`. You can use the  [FontAwesomeModule](https://github.com/JoanZapata/android-iconify/blob/master/android-iconify-fontawesome/src/main/java/com/joanzapata/iconify/fonts/FontAwesomeModule.java) as an example.
+In case you can't find the icon you want, you can extend the available icon directly from your app. All you need to do is to implement `IconFontDescriptor` with a `.ttf` file in your assets and provide the mapping between keys and special characters, then give it to `iconivoid.with()`. You can use the  [FontAwesomeModule](https://github.com/JoanZapata/android-iconivoid/blob/master/android-iconivoid-fontawesome/src/main/java/com/joanzapata/iconivoid/fonts/FontAwesomeModule.java) as an example.
 
-There are no constraints on the icon keys, but I strongly suggest you use a unique prefix like `my-` or anything, to avoid conflicts with other modules. FYI, if there **is** a conflict, the first module declared with `Iconify.with()` has priority.
+There are no constraints on the icon keys, but I strongly suggest you use a unique prefix like `my-` or anything, to avoid conflicts with other modules. FYI, if there **is** a conflict, the first module declared with `iconivoid.with()` has priority.
 
-The only dependency you need if you want to use a custom icon is Iconify core.
+The only dependency you need if you want to use a custom icon is iconivoid core.
 
 ```gradle
-compile 'com.joanzapata.iconify:android-iconify:2.2.2'
+compile 'io.github.diegoflassa.iconivoid:android-iconivoid:2.2.2'
 ```
 
 -----
 
 ## Contributions
 
-* Joan Zapata [@JoanZapata](https://github.com/JoanZapata)
-* Damien Villeneuve [@DayS](https://github.com/DayS)
-* Mike Penz [@mikepenz](https://github.com/mikepenz)
+* Diego Felipe Lassa [@diegoflassa](https://github.com/diegoflassa)
 
 ## License
 
 ```
-Copyright 2015 Joan Zapata
+Copyright 2020 Diego Felipe Lassa
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

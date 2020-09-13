@@ -3,4 +3,6 @@ build/
 .gradle
 *.iml
 gradle.properties
-android-iconify.7z
+android-iconivoid.7z
+keystore-iconivoid.jks
+android-iconivoid-sample/release/

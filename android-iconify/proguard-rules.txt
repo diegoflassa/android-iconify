@@ -1,2 +1,0 @@
-#noinspection ShrinkerUnresolvedReference
--keep class com.joanzapata.iconify.** { *; }

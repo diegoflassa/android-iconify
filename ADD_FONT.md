@@ -2,7 +2,7 @@
 
 **1** Go to [Icomoon](https://icomoon.io) and generate a font.
 
-**2** Copy `./android-iconify-fontawesome` to `./android-iconify-XXX`
+**2** Copy `./android-iconivoid-fontawesome` to `./android-iconivoid-XXX`
 
 **3** Update `./settings.gradle` with the new module.
 
@@ -18,6 +18,6 @@
 
 > If you generated from Icomoon, you can quickly generate the mappings using find `\.(.*?):before \{\n.*?: "\\(.*?)";\n}` replace `$1('\\u$2'),` on the generated `styles.css` file.
 
-**9** Add the dependency in `android-iconify-sample` and update the sample with the new font.
+**9** Add the dependency in `android-iconivoid-sample` and update the sample with the new font.
 
 **10** Compile and test the sample app on your device and make sure everything's ok.
