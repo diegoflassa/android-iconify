@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Iconify</string>
+    <string name="app_name">IconiVoid</string>
     <string name="icon_key">{%1$s}</string>
     <string name="image_header">Image Header</string>
+    <string name="search_title">Search</string>
+    <string name="search_hint">Icon name</string>
 </resources>

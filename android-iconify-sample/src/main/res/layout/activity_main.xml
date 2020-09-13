@@ -19,9 +19,11 @@
             app:collapsedTitleTextAppearance="@style/CollapsingToolbarLayoutExpandedTextStyle"
             app:expandedTitleMarginBottom="50dp"
             app:title="@string/app_name"
+            android:minHeight="100dp"
+            app:layout_collapseMode="pin"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?attr/colorPrimary"
-            android:fitsSystemWindows="true">
+            android:fitsSystemWindows="true" >
 
             <ImageView
                 android:src="@drawable/header"
@@ -45,6 +47,7 @@
                 android:id="@+id/tabs"
                 app:tabGravity="start"
                 app:tabMode="scrollable"
+                app:tabPaddingTop="30dp"
                 app:tabIndicatorHeight="4dp"
                 android:layout_gravity="bottom"
                 android:layout_width="match_parent"

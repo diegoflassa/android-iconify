@@ -67,4 +67,5 @@ dependencies {
     implementation project(':android-iconify-weathericons')
     implementation project(':android-iconify-simplelineicons')
     implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
 }

@@ -11,6 +11,7 @@ import com.joanzapata.iconify.sample.databinding.ItemFontBinding
 import com.joanzapata.iconify.sample.utils.AndroidUtils.getScreenSize
 
 class FontIconsViewPagerAdapter(private val fonts: Array<Font>) : PagerAdapter() {
+
     interface FontWithTitle {
         val font: IconFontDescriptor
         val title: String
@@ -35,11 +36,11 @@ class FontIconsViewPagerAdapter(private val fonts: Array<Font>) : PagerAdapter()
         return fonts[position].title
     }
 
-    override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view === `object`
+    override fun isViewFromObject(view: View, object_: Any): Boolean {
+        return view === object_
     }
 
-    override fun destroyItem(container: ViewGroup, position: Int, object_: Any) {
-        container.removeView(object_ as View?)
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+        container.removeView(`object` as View?)
     }
 }
